@@ -1,0 +1,19 @@
+extends ./layout
+
+block content
+    .wrap
+        .block.gameblock
+            .title 
+                span 参赛作品
+            .content
+                - for(var i=0;i<list.length;i++)
+                    a.game(href="/info/#{list[i]._id}")
+                        img(src="/upload/#{list[i].icon}")
+                        .tbox
+                            span.t 游戏名称
+                            span.c #{list[i].name}
+                        .tbox
+                            span.t 开发者
+                            span.c #{list[i].developer}
+    script(src="/js/jq.js")
+    script(src="/js/common.js")

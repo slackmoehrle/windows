@@ -1,0 +1,37 @@
+extends ./layout
+
+block content
+    .wrap
+        .gameinfo
+            .header
+                img(src="/upload/#{info.icon}",height="110",width="110")
+                .dicts
+                    .dict
+                        span.t 游戏名称：
+                        span.c #{info.name}
+                    .dict
+                        span.t 开  发   者：
+                        span.c #{info.developer}
+                    .dict
+                        span.t 在线链接：
+                        span.c 
+                            a(href="#{info.devlink}") #{info.name}
+                
+        .images
+            .swiper-container
+                .swiper-wrapper
+                    - var images = info.shootscreen.split(",").slice(0, -1);
+                    - for(var i = 0; i < images.length; i++){
+                        .swiper-slide
+                            img(src="/upload/#{images[i]}",height="399")
+                    - }
+        .info 
+            .btn.single 作品简介
+            p   #{info.intro}
+    script(src="/js/swiper.js")
+    script(src="/js/s.js")
+    script(src="/js/jq.js")
+    script(src="/js/common.js")
+
+
+

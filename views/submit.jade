@@ -1,0 +1,115 @@
+extends ./layout
+
+block content
+    .wrap.submit
+        .tips
+            p 首先您需要跳转至
+                a.btn(target="_blank",href="https://appdev.microsoft.com/storeportals/") Windows应用商店
+                | 或
+                a.btn(target="_blank",href="http://dev.windowsphone.com/dashboard") Windows Phone应用商店
+                | 提交您的游戏。
+            p 如果您没有Windows开发者账户，请<a target="_blank" href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_EAC=300098218" class="register">注册</a>
+            p 如果您需要Windows开发人员账户的免费注册码，请邮件至大赛官网邮箱， 申请免费注册码：windows@cocos.com 
+            p 当您的游戏发布至“Windows应用商店”或“Windows Phone应用商店”后，并且填写以下信息，才能获得参赛资格
+        h3.title 提交参赛作品
+
+        table.form
+            tr
+                td.first
+                    i.require *
+                    span 游戏名称:
+                td.second
+                    input.text.name(type="text")
+            tr
+                td.first
+                    i.require *
+                    span 开发者:
+                td.second
+                    input.text.developer(type="text")
+            
+            tr
+                td.first(style="vertical-align: text-top;padding-top: 20px;")
+                    i.require *
+                    span 游戏下载地址:
+                td.second
+                    input.devlink.text(type="text")
+                    p 当您的游戏发布至“Windows应用商店”或“Windows Phone应用商店“后，请务必在此处填写发布后的下载链接。如您不清楚如何获取此链接，请邮件至微软官方邮箱，咨询应用提交细节：askexpert@microsoft.com
+            tr
+                td.first
+                    i.require *
+                    span 上传游戏图标:
+                td.second.headimage
+                    img.head(src="/assets/cocos-gray.png")
+                    .selectimage
+                        span 图片大小不能超过 2MB
+                        span 图标类型为jpg或者png格式
+                        br
+                        a.icon.btn.uploadfile(href="#") 
+                            span 选择图标
+                            input(type="file",xtype="icon")
+            tr
+                td.first
+                    i.require *
+                    span 上传游戏截图:
+                td.second.shootscreen
+                    a.btn.uploadfile(href="#") 
+                        span 选择截图
+                        input(type="file")
+                    a.btn.uploadfile(href="#") 
+                        span 选择截图
+                        input(type="file")
+                    a.btn.uploadfile(href="#") 
+                        span 选择截图
+                        input(type="file")
+                    a.btn.uploadfile(href="#") 
+                        span 选择截图
+                        input(type="file")
+                    a.btn.uploadfile(href="#") 
+                        span 选择截图
+                        input(type="file")
+            tr
+                td.first
+                    span 游戏简介:
+                td.second(colspan="2")
+                    textarea.intro
+            tr
+                td.first
+                    i.require *
+                    span 联系邮箱:
+                td.second 
+                    input.email.text(type="text")
+            tr
+                td.first
+                    i.require *
+                    span 联系电话:
+                td.second
+                    input.phone.text(type="text")
+            tr
+                td.first
+                    span 友情提示:
+                td.second
+                    p 如果您在比赛过程中遇到任何问题，请咨询官方客服邮箱；
+                    p 客服邮箱地址：windows@cocos.com
+            tr
+                td(colspan="3")
+                    a.submitbtn.btn(href="#") 提交
+    img.previewfile(style="display:none")
+    canvas#canvas(style="display:none")
+    script(src="/js/jq.js")
+    script(src="/js/submit.js")
+    script(src="/js/common.js")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
