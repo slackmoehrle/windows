@@ -1,5 +1,5 @@
 rm -rf all.tar.gz
-tar -czf all.tar.gz   views
+tar -czf all.tar.gz   views public
 scp -r all.tar.gz root@vpn:~/win/
 
 ssh -t  root@vpn "cd win/ && tar -zvxf all.tar.gz"
